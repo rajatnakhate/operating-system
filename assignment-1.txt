@@ -1,0 +1,150 @@
+RAJAT@RAJAT-PC ~
+$ pwd
+/home/RAJAT
+
+RAJAT@RAJAT-PC ~
+$ date
+Tue, Sep  8, 2020  8:06:36 AM
+
+RAJAT@RAJAT-PC ~
+$ whoami
+RAJAT
+
+RAJAT@RAJAT-PC ~
+$ logname
+RAJAT
+
+RAJAT@RAJAT-PC ~
+$ uname
+CYGWIN_NT-6.3
+
+RAJAT@RAJAT-PC ~
+$ ^C
+
+RAJAT@RAJAT-PC ~
+$
+ 
+Q2.	A) Create three directory a b and c and create a.txt,b.txt and c.txt
+		in each directory respectively and then copy c directory into the a.
+	B)Move Directory b to c.
+	C)Create alias of ls -lh command to your name.
+	D)Change Directory name a to cdac.
+a)
+
+RAJAT@RAJAT-PC ~
+$ cd "F:\CDAC\CDAC kharghar\DAC\OS module\assignpractice"
+
+RAJAT@RAJAT-PC /cygdrive/f/CDAC/CDAC kharghar/DAC/OS module/assignpractice
+$ mkdir a
+
+RAJAT@RAJAT-PC /cygdrive/f/CDAC/CDAC kharghar/DAC/OS module/assignpractice
+$ mkdir b
+
+RAJAT@RAJAT-PC /cygdrive/f/CDAC/CDAC kharghar/DAC/OS module/assignpractice
+$ mkdir c
+
+RAJAT@RAJAT-PC /cygdrive/f/CDAC/CDAC kharghar/DAC/OS module/assignpractice
+$ cd a
+
+RAJAT@RAJAT-PC /cygdrive/f/CDAC/CDAC kharghar/DAC/OS module/assignpractice/a
+$ touch a
+
+RAJAT@RAJAT-PC /cygdrive/f/CDAC/CDAC kharghar/DAC/OS module/assignpractice/a
+$ cd ..
+
+RAJAT@RAJAT-PC /cygdrive/f/CDAC/CDAC kharghar/DAC/OS module/assignpractice
+$ cd b
+
+RAJAT@RAJAT-PC /cygdrive/f/CDAC/CDAC kharghar/DAC/OS module/assignpractice/b
+$ touch b.txt
+
+RAJAT@RAJAT-PC /cygdrive/f/CDAC/CDAC kharghar/DAC/OS module/assignpractice/b
+$ cd ..
+
+RAJAT@RAJAT-PC /cygdrive/f/CDAC/CDAC kharghar/DAC/OS module/assignpractice
+$ cd c
+
+RAJAT@RAJAT-PC /cygdrive/f/CDAC/CDAC kharghar/DAC/OS module/assignpractice/c
+$ touch c.txt
+
+RAJAT@RAJAT-PC /cygdrive/f/CDAC/CDAC kharghar/DAC/OS module/assignpractice/c
+$ cd ..
+
+RAJAT@RAJAT-PC /cygdrive/f/CDAC/CDAC kharghar/DAC/OS module/assignpractice
+$ cd a
+
+RAJAT@RAJAT-PC /cygdrive/f/CDAC/CDAC kharghar/DAC/OS module/assignpractice/a
+$ touch a.txt
+
+b)
+
+RAJAT@RAJAT-PC /cygdrive/f/CDAC/CDAC kharghar/DAC/OS module/assignpractice
+$ mv b c
+
+c)
+
+d)
+RAJAT@RAJAT-PC /cygdrive/f/CDAC/CDAC kharghar/DAC/OS module/assignpractice
+$ mv a cdac
+
+
+
+
+Q3. A) Create five files file1.txt , file2.txt ,file3.txt file4.txt and
+    file5.txt with some text inside it. Search for 's' character
+    inside all the files using grep command.
+    Also Use cat to view all file content together.
+	B)Create file.txt using cat and edit that using nano editor.
+	c)Create 5 empty files using touch command
+	D)Remove previously created directory a , b and c.
+
+
+a)
+RAJAT@RAJAT-PC /cygdrive/f/CDAC/CDAC kharghar/DAC/OS module/assignpractice
+$ touch 1.txt
+
+RAJAT@RAJAT-PC /cygdrive/f/CDAC/CDAC kharghar/DAC/OS module/assignpractice
+$ touch 2.txt
+
+RAJAT@RAJAT-PC /cygdrive/f/CDAC/CDAC kharghar/DAC/OS module/assignpractice
+$ touch 3.txt
+
+RAJAT@RAJAT-PC /cygdrive/f/CDAC/CDAC kharghar/DAC/OS module/assignpractice
+$ touch 4.txt
+
+RAJAT@RAJAT-PC /cygdrive/f/CDAC/CDAC kharghar/DAC/OS module/assignpractice
+$ touch 5.txt
+
+RAJAT@RAJAT-PC /cygdrive/f/CDAC/CDAC kharghar/DAC/OS module/assignpractice
+$ grep s 1.txt
+this is first file
+
+
+
+RAJAT@RAJAT-PC /cygdrive/f/CDAC/CDAC kharghar/DAC/OS module/assignpractice
+$ rm -r c cdac
+
+
+RAJAT@RAJAT-PC /cygdrive/f/CDAC/CDAC kharghar/DAC/OS module/assignpractice
+$ cat >file.txt
+
+
+Q4. Create a file with some content using vi editor
+	a) Display the file using cat command
+	b) Display line numbers along with content
+	c) Display the file in reverse order using tac
+	d) Combine multiple files using cat command
+
+
+RAJAT@RAJAT-PC /cygdrive/f/CDAC/CDAC kharghar/DAC/OS module/assignpractice
+$ cat -n file.txt
+     1  thi9s is new file
+
+RAJAT@RAJAT-PC /cygdrive/f/CDAC/CDAC kharghar/DAC/OS module/assignpractice
+$ tac file.txt
+
+thi9s is new file
+
+
+RAJAT@RAJAT-PC /cygdrive/f/CDAC/CDAC kharghar/DAC/OS module/assignpractice
+$ $cat "1.txt" "2.txt" "3.txt" > "file.txt"
