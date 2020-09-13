@@ -148,3 +148,247 @@ thi9s is new file
 
 RAJAT@RAJAT-PC /cygdrive/f/CDAC/CDAC kharghar/DAC/OS module/assignpractice
 $ $cat "1.txt" "2.txt" "3.txt" > "file.txt"
+
+Q5. Create Random some files and sub directories.
+	a) display files row wise, column wise, 1 per row
+	b) sort the files in ascending, descending order
+	c) Create some hidden files and sub directories and display them using “ls -a”
+	d) Change time stamp of some files and directories using touch command and display the files using ls -t ls -rt
+	e) Recursive display contents of your home directory.
+	f) display all attributes of files and directories using ls -l
+	g) display attributes of a directory using ls -ld
+
+
+ans--
+
+
+
+RAJAT@RAJAT-PC ~$ mkdir random
+
+RAJAT@RAJAT-PC ~$ cd
+
+RAJAT@RAJAT-PC ~$ cd random
+
+RAJAT@RAJAT-PC ~/random$ mkdir first
+
+RAJAT@RAJAT-PC ~/random$ cd first
+
+RAJAT@RAJAT-PC ~/random/first$ mkdir first11
+
+RAJAT@RAJAT-PC ~/random/first$ cd
+
+RAJAT@RAJAT-PC ~$ cd random
+
+RAJAT@RAJAT-PC ~/random$ mkdir second
+
+RAJAT@RAJAT-PC ~/random$ mardir 3rd
+mardir: command not found
+
+RAJAT@RAJAT-PC ~/random$ mkdir 3rd
+
+RAJAT@RAJAT-PC ~/random$ ls
+3rd  first  second
+
+RAJAT@RAJAT-PC ~/random$ cat > file.txt
+hello i am Rajat
+
+RAJAT@RAJAT-PC ~/random$ column -t file.txt
+hello  i  am  Rajat
+
+RAJAT@RAJAT-PC ~/random$ row file.txt
+
+Command 'row' not found, did you mean:
+
+  command 'cow' from deb fl-cow (0.6-4.2)
+  command 'ro' from deb golang-redoctober (0.0~git20161017.0.78e9720-4)
+  command 'raw' from deb util-linux (2.34-0.1ubuntu9)
+  command 'rox' from deb rox-filer (1:2.11-1)
+  command 'sow' from deb ruby-hoe (3.21.0+dfsg1-1)
+
+Try: sudo apt install <deb name>
+
+
+RAJAT@RAJAT-PC ~/random$ sort
+
+
+
+RAJAT@RAJAT-PC ~/random$ cd
+
+RAJAT@RAJAT-PC ~$ sort random
+sort: read failed: random: Is a directory
+
+RAJAT@RAJAT-PC ~$ cd random
+
+RAJAT@RAJAT-PC ~/random$ sort file.txt
+hello i am Rajat
+
+RAJAT@RAJAT-PC ~/random$ cat > fruits
+apple
+banana
+pineapple
+grapes
+priyankasoni@LAPTOP-FNMGSS07:~/random$ sort fruits
+apple
+banana
+grapes
+pineapple
+priyankasoni@LAPTOP-FNMGSS07:~/random$ sort -r fruits
+pineapple
+grapes
+banana
+apple
+
+RAJAT@RAJAT-PC ~/random$ mkdir .hidden
+
+RAJAT@RAJAT-PC ~/random$ ls
+3rd  file.txt  first  fruits  second
+
+RAJAT@RAJAT-PC ~/random$ ls -a
+.  ..  .hidden  3rd  file.txt  first  fruits  second
+
+RAJAT@RAJAT-PC ~/random$ touch .hide.txt
+
+RAJAT@RAJAT-PC ~/random$ ls
+3rd  file.txt  first  fruits  second
+
+RAJAT@RAJAT-PC ~/random$ ls -a
+.  ..  .hidden  .hide.txt  3rd  file.txt  first  fruits  second
+
+RAJAT@RAJAT-PC ~/random$ stat file.txt
+  File: file.txt
+  Size: 21              Blocks: 0          IO Block: 4096   regular file
+Device: 2h/2d   Inode: 16888498602704705  Links: 1
+Access: (0644/-rw-r--r--)  Uid: ( 1000/rajat)   Gid: ( 1000/rajat)
+Access: 2020-09-08 18:29:28.603221800 +0530
+Modify: 2020-09-08 18:22:11.871545700 +0530
+Change: 2020-09-08 18:22:11.871545700 +0530
+ Birth: -
+
+RAJAT@RAJAT-PC ~/random$ touch -a file.txt
+
+RAJAT@RAJAT-PC ~/random$ stat file.txt
+  File: file.txt
+  Size: 21              Blocks: 0          IO Block: 4096   regular file
+Device: 2h/2d   Inode: 16888498602704705  Links: 1
+Access: (0644/-rw-r--r--)  Uid: ( 1000/rajat)   Gid: ( 1000/rajat)
+Access: 2020-09-08 18:37:50.362832000 +0530
+Modify: 2020-09-08 18:22:11.871545700 +0530
+Change: 2020-09-08 18:37:50.362832000 +0530
+ Birth: -
+
+RAJAT@RAJAT-PC ~/random$ touch -m file.txt
+
+RAJAT@RAJAT-PC ~/random$ stat file.txt
+  File: file.txt
+  Size: 21              Blocks: 0          IO Block: 4096   regular file
+Device: 2h/2d   Inode: 16888498602704705  Links: 1
+Access: (0644/-rw-r--r--)  Uid: ( 1000/rajat)   Gid: ( 1000/rajat)
+Access: 2020-09-08 18:37:50.362832000 +0530
+Modify: 2020-09-08 18:39:23.141406100 +0530
+Change: 2020-09-08 18:39:23.141406100 +0530
+ Birth: -
+
+RAJAT@RAJAT-PC ~/random$ ls -t
+file.txt  fruits  3rd  second  first
+
+RAJAT@RAJAT-PC ~/random$ ls -rt
+first  second  3rd  fruits  file.txt
+
+RAJAT@RAJAT-PC ~/random$ cd
+
+RAJAT@RAJAT-PC ~$ ls
+cdac  ossep  random
+
+RAJAT@RAJAT-PC ~$ ls -r
+random  ossep  cdac
+
+
+Q1. Create directory of your name and then create 4 files inside it named
+	a.txt, b.txt, c.txt and d.sh. And change the directory permission to
+	only user and also files permission to only user such that
+		a)user can read and write the file a.txt and b.txt
+		b)user can write the file c.txt
+		c)user can exectuable the file d.sh. Make
+			Contents of file d.sh:
+			#/bin/sh
+			ls -lh
+
+ans--
+
+RAJAT@RAJAT-PC ~/random$ cd priyanka
+RAJAT@RAJAT-PC ~/random/rajat$ cat > a.txt
+hello
+RAJAT@RAJAT-PC ~/random/rajat$ cat > b.txt
+i am
+RAJAT@RAJAT-PC ~/random/rajat$ cat >c.txt
+inside
+RAJAT@RAJAT-PC ~/random/rajat$ cat > d.sh
+d file
+RAJAT@RAJAT-PC ~/random/rajat$ chmod go=r
+chmod: missing operand after ‘go=r’
+Try 'chmod --help' for more information.
+RAJAT@RAJAT-PC ~/random/rajat$ chmod go=r
+chmod: missing operand after ‘go=r’
+Try 'chmod --help' for more information.
+RAJAT@RAJAT-PC ~/random/rajat$ cd
+RAJAT@RAJAT-PC ~$ cd random
+RAJAT@RAJAT-PC ~/random:$ chmod go=r rajat
+RAJAT@RAJAT-PC ~/random/rajat$ cd rajat
+priyankasoni@LAPTOP-FNMGSS07:~/random/rajat$ chmod a+w+r a.txt b.txt
+priyankasoni@LAPTOP-FNMGSS07:~/random/rajat$ chmod a+w c.txt
+RAJAT@RAJAT-PC ~/random/rajat$ chmod a+x d.sh
+
+RAJAT@RAJAT-PC ~/random/rajat$ cat d.sh
+d file
+
+RAJAT@RAJAT-PC ~/random/rajat$ cat c.txt
+inside
+
+
+Q2. Change the permission of the previous directory to executable only.
+	Analyze the output.
+
+
+ans--
+
+RAJAT@RAJAT-PC ~/random$ chmod go=x rajat
+
+
+Q3. Change the permission of the previous directory to read only.
+	Analyze the output.
+
+ans--
+
+RAJAT@RAJAT-PC ~/random/rajat$ chmod go-wx a.txt
+
+Q4. Use echo to list the all files of your home directory.
+
+ans--
+
+
+RAJAT@RAJAT-PC ~$ echo *
+cdac ossep random
+
+
+Q5. Use echo to list the all files of /etc/ directory
+ans--
+
+ls /etc
+
+Q6. Use echo to append your name to a.txt
+
+ans-
+
+
+RAJAT@RAJAT-PC ~/random/rajat$ echo "rajat" >a.txt
+
+RAJAT@RAJAT-PC ~/random/rajat$ cat a.txt
+Rajat
+
+
+
+
+
+
+
+
